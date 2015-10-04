@@ -213,9 +213,11 @@ phina.define('MainScene', {
       var flow = phina.util.Flow(function(resolve, reject) {
         var counter = 3;
         self.judgeGroup.children.each(function(judge) {
+          judge.fill = FRIEND_COLOR;
+          judge.label.fill = 'white';
           judge.tweener.clear()
-                       .to({scaleX: 2.2, scaleY: 2.2}, 200)
-                       .to({scaleX: 2.0, scaleY: 2.0}, 200)
+                       .to({scaleX: 2.2, scaleY: 2.2}, 400)
+                       .to({scaleX: 2.0, scaleY: 2.0}, 400)
                        .call(function() {
                          counter--;
                          if (counter === 0) {
@@ -229,7 +231,8 @@ phina.define('MainScene', {
         self.tweener.clear().wait(1000).call(function() {
           self.exit('result', {
             score: self.step,
-            message: 'Eat And Bite is a phina.js project'
+            message: 'Eat And Bite is a phina.js project',
+            hashtags: 'phina_js,game,javascript',
           });
         });
       });
