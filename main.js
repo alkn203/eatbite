@@ -285,8 +285,7 @@ phina.define('Target', {
     this.isEmpty = true;
     
     this.label = Label({
-      text: this.num + '',
-//      text: '？',
+      text: '？',
       fontSize: TARGET_SIZE,
       fill: TARGET_COLOR,
     }).addChildTo(this);
