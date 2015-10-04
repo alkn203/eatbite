@@ -229,9 +229,9 @@ phina.define('MainScene', {
       // リザルトシーンへ
       flow.then(function(mes) {
         self.tweener.clear().wait(1000).call(function() {
-          self.exit('result', {
+          self.exit({
             score: self.step,
-            message: 'Eat And Bite is a phina.js project',
+            message: '<Eat And Bite> Made in phina.js',
             hashtags: 'phina_js,game,javascript',
           });
         });
