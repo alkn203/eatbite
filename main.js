@@ -231,7 +231,7 @@ phina.define('MainScene', {
         self.tweener.clear().wait(1000).call(function() {
           self.exit({
             score: self.step,
-            message: '<Eat And Bite> Made in phina.js',
+            message: '<Eat And Bite> Made in phina.js.\nscore:{score}.',
             hashtags: 'phina_js,game,javascript',
           });
         });
