@@ -12,7 +12,18 @@
     <link rel="stylesheet" href="style.css">
     
     <script src="https://rawgit.com/phi-jp/phina.js/develop/build/phina.js"></script>
-    <script src="main.js"></script>
+    <script>
+    window.onload = function() {
+      var q = location.search.substr(1).toObject();
+      var script = phina.asset.Script();
+      if (q.mode === 'dev') {
+        script.load('main.js');
+      }
+      else {
+        script.load('main.min.js');
+      }
+    };
+    </script>
   </head>
   <body>
   </body>
